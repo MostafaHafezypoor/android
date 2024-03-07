@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<com.github.captain_miao.optroundcardview.OptRoundCardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:optRoundCardCornerRadius="20sp"
+    app:optRoundCardBackgroundColor="#304FFE"
+    android:layout_marginRight="5sp"
+    android:layout_marginLeft="5sp"
+    android:layout_marginTop="1sp">
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameNazrOnline"
+        android:textSize="25sp"
+        android:textColor="#fff"
+        android:layout_margin="5sp"/>
+</com.github.captain_miao.optroundcardview.OptRoundCardView>
+</layout>

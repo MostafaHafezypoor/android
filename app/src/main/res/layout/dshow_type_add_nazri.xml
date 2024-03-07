@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="نذر کتاب"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:id="@+id/btnBook"
+        android:background="#2C5910"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="#000"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="نذر غذا"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:id="@+id/btnFood"
+        android:textSize="30sp"
+        android:background="#2C5910"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="#000"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="نذر آنلاین"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:id="@+id/btnOnline"
+        android:background="#2C5910"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="#000"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="سایر"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:id="@+id/btnOther"
+        android:textSize="30sp"
+        android:background="#2C5910"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="#000"/>
+</LinearLayout>

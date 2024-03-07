@@ -1,0 +1,13 @@
+package mostafa.hafezypoor.nazri;
+
+import android.app.Application;
+
+import ir.map.sdk_map.Mapir;
+
+public class AppController extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Mapir.init(this,"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg1YjZlZjI0OWI4MmYxMzM1YzE3YzU5Yjc4MGE1ODM3NjA2MGUxYjczMTk3MGQxNzkyY2M1OGQ2YjIzNjNhZWU1NGZlMTdkNjY0ZDRmYjg1In0.eyJhdWQiOiIxNjM4OCIsImp0aSI6Ijg1YjZlZjI0OWI4MmYxMzM1YzE3YzU5Yjc4MGE1ODM3NjA2MGUxYjczMTk3MGQxNzkyY2M1OGQ2YjIzNjNhZWU1NGZlMTdkNjY0ZDRmYjg1IiwiaWF0IjoxNjM5OTM5MzI5LCJuYmYiOjE2Mzk5MzkzMjksImV4cCI6MTY0MjQ0NDkyOSwic3ViIjoiIiwic2NvcGVzIjpbImJhc2ljIl19.a5NWSr-niBkLKCDWHXoFO2B0O7cA8toj_FZz_7mN2KdMnAGhIu_mqWvRsWmnR0HdXryP01N6Qxu_yoOSXRf8mEAWpDa5Trqcy-PJfjMUlDLsjH_9u_wzOw-If6NMHPytT7GAXEKyjeTSmw8PjSq92fn7vIyCYdf3EYRSGICaM1R0HgP1KKqzOIJsSpmhMvvuEcz7CTriUeAtfyyku7gYWugmBQHOlNSS13WDuPiCPw07vYGoRr8Jt9bCZpRb1b2tNMR8pHmChANTFMEELRW2J7v9OSSt1pNiCtksnQbNB1GGzHGlTDfIDRHFWMEbZbPWNh2ns33WZFmRngUBa78ilA");
+    }
+}

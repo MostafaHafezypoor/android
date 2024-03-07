@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.github.captain_miao.optroundcardview.OptRoundCardView
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/container_opt_nazriOnline"
+                app:optRoundCardCornerRadius="20sp"
+                app:optRoundCardLeftTopCorner="false"
+                app:optRoundCardRightTopCorner="false"
+                app:optRoundCardRightBottomCorner="true"
+                app:optRoundCardLeftBottomCorner="true"
+                app:optRoundCardBottomEdges="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#fff"
+                        android:id="@+id/listNazrOnline"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="#0CAA4E"
+                        android:text="نذر آنلاین"
+                        android:gravity="center"
+                        android:textSize="25sp"
+                        android:textColor="#fff"/>
+                </LinearLayout>
+            </com.github.captain_miao.optroundcardview.OptRoundCardView>
+            <ir.map.sdk_map.maps.MapView
+                android:id="@+id/map_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                mapbox:mapbox_cameraZoomMax="20"
+                mapbox:mapbox_cameraZoomMin="1" />
+            <com.github.captain_miao.optroundcardview.OptRoundCardView
+                android:id="@+id/top_card_view"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                app:optRoundCardCornerRadius="100sp"
+                app:optRoundCardBackgroundColor="#fff"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10sp"
+                android:layout_marginBottom="130sp" >
+                <ImageView
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:id="@+id/fillterBtn"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_search_24" />
+            </com.github.captain_miao.optroundcardview.OptRoundCardView>
+            <com.github.captain_miao.optroundcardview.OptRoundCardView
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                app:optRoundCardCornerRadius="100sp"
+                app:optRoundCardBackgroundColor="#fff"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10sp"
+                android:layout_marginBottom="130sp" >
+                <ImageView
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_my_location_24"
+                    android:id="@+id/myLocation"/>
+            </com.github.captain_miao.optroundcardview.OptRoundCardView>
+        </RelativeLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               android:layout_alignParentBottom="true">
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            app:fabAnchorMode="cradle"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/green"
+            app:fabCradleRoundedCornerRadius="50sp"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            app:fabCradleMargin="8sp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:background="@android:color/transparent"
+        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu_f_main"
+        android:id="@+id/botom_nav"
+        app:itemIconSize="50sp"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#fff"
+        app:elevation="0sp" />
+
+
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:foreground="@drawable/background_fab_button_fmain"
+                    app:fabCustomSize="@dimen/one"
+                    android:layout_marginBottom="@dimen/tow"
+                    android:backgroundTint="@android:color/transparent"
+                    android:id="@+id/fab_add"
+                    app:layout_anchor="@id/bottomAppBar"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/bottomSheet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_ground_botom_sheet"
+                    android:elevation="10sp"
+                    android:orientation="vertical"
+                    app:behavior_hideable="true"
+                    app:behavior_peekHeight="0dp"
+                    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+                          <ViewFlipper
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/viewFlpperFMain">
+<!-- SELECT NAZRI TYPE-->
+                              <LinearLayout
+                                  android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:orientation="vertical"
+                                 >
+                                  <View
+                                      android:layout_width="50sp"
+                                      android:layout_height="5sp"
+                                      android:layout_gravity="center"
+                                      android:layout_margin="5sp"
+                                      android:background="#C1C1C1"/>
+                                  <com.google.android.material.textview.MaterialTextView
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:text="نوع نذری"
+                                      android:textAlignment="center"
+                                      android:textSize="30sp"
+                                      android:textColor="#000"/>
+                                  <View
+                                      android:layout_width="match_parent"
+                                      android:layout_height="1sp"
+                                      android:background="#6A6A6A"/>
+                                  <com.google.android.material.textview.MaterialTextView
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:text="همه نذری ها"
+                                      android:textAlignment="center"
+                                      android:textSize="20sp"
+                                      android:textColor="#000"
+                                      android:id="@+id/allNazri"/>
+                                  <com.google.android.material.textview.MaterialTextView
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:text="نذری غذا"
+                                      android:textAlignment="center"
+                                      android:textSize="20sp"
+                                      android:textColor="#000"
+                                      android:id="@+id/foodNazri"/>
+                                  <com.google.android.material.textview.MaterialTextView
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:text="نذری کتاب"
+                                      android:textAlignment="center"
+                                      android:textSize="20sp"
+                                      android:textColor="#000"
+                                      android:id="@+id/bookNazri"/>
+                                  <com.google.android.material.textview.MaterialTextView
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:text="بقیه نذری ها"
+                                      android:textColor="#000"
+                                      android:textAlignment="center"
+                                      android:textSize="20sp"
+                                      android:id="@+id/otherNazri"/>
+                              </LinearLayout>
+<!--                              SELECT STATES OSTAN-->
+                              <LinearLayout
+                                  android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:orientation="vertical">
+                                  <View
+                                      android:layout_width="50sp"
+                                      android:layout_height="5sp"
+                                      android:layout_gravity="center"
+                                      android:layout_margin="5sp"
+                                      android:background="#C1C1C1"/>
+                                  <com.google.android.material.textview.MaterialTextView
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:text="انتخاب استان"
+                                      android:textAlignment="center"
+                                      android:textSize="30sp"
+                                      android:textColor="#000"/>
+                                  <View
+                                      android:layout_width="match_parent"
+                                      android:layout_height="1sp"
+                                      android:background="#6A6A6A"/>
+                                  <androidx.recyclerview.widget.RecyclerView
+                                      android:layout_width="match_parent"
+                                      android:layout_height="match_parent"
+                                      android:id="@+id/listOstan"/>
+                              </LinearLayout>
+<!--                              SELECT CITY-->
+                              <LinearLayout
+                                  android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:orientation="vertical">
+                                  <View
+                                      android:layout_width="50sp"
+                                      android:layout_height="5sp"
+                                      android:layout_gravity="center"
+                                      android:layout_margin="5sp"
+                                      android:background="#C1C1C1"/>
+                                  <com.google.android.material.textview.MaterialTextView
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:text="انتخاب شهر"
+                                      android:textAlignment="center"
+                                      android:textSize="30sp"
+                                      android:textColor="#000"/>
+                                  <View
+                                      android:layout_width="match_parent"
+                                      android:layout_height="1sp"
+                                      android:background="#6A6A6A"/>
+                                  <androidx.recyclerview.widget.RecyclerView
+                                      android:layout_width="match_parent"
+                                      android:layout_height="match_parent"
+                                      android:id="@+id/listCity"/>
+                              </LinearLayout>
+                          </ViewFlipper>
+                        </LinearLayout>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>
+</layout>

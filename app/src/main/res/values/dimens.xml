@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+<dimen name="one">75sp</dimen>
+<dimen name="tow">50sp</dimen>
+<dimen name="Three">30</dimen>
+
+</resources>

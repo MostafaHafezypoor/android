@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/Lineartop"
+        android:orientation="horizontal"
+        android:background="@drawable/backgroud_top_fshowallnzri">
+        <ImageView
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:id="@+id/imageBack"
+            android:layout_marginLeft="30sp"
+            android:layout_gravity="center_vertical"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="فهرست نذری ها"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/Lineartop"
+        android:id="@+id/linearFilter">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray"
+                android:text="سایر نذری ها"
+                android:layout_marginLeft="5sp"
+                android:id="@+id/btnOtherNazri"
+                app:cornerRadius="40sp"
+                android:layout_weight="1"
+                android:textColor="#fff" />
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="نذر آنلاین"
+                android:layout_marginLeft="5sp"
+                android:backgroundTint="@color/gray"
+                android:id="@+id/btnNazzrOnline"
+                app:cornerRadius="40sp"
+                android:layout_weight="1"
+                android:textColor="#fff"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray"
+                android:layout_marginLeft="5sp"
+                app:cornerRadius="40sp"
+                android:text="همه نوع نذری"
+                android:id="@+id/btnAllNazri"
+                android:layout_weight="1"
+                android:textColor="#fff"/>
+        </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <com.google.android.material.button.MaterialButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:cornerRadius="40sp"
+          android:text="نذر غذا"
+          android:backgroundTint="@color/gray"
+          android:textColor="#fff"
+          android:id="@+id/btnNazrFood"
+          android:layout_weight="1"/>
+      <com.google.android.material.button.MaterialButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:backgroundTint="@color/gray"
+          android:text="نذر کتاب"
+          android:layout_marginLeft="5sp"
+          app:cornerRadius="40sp"
+          android:id="@+id/btnNazrBook"
+          android:layout_weight="1"
+          android:textColor="#fff"/>
+  </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="10sp"
+        android:layout_height="20sp"
+        android:background="#000"
+        android:layout_below="@id/linearFilter"
+        android:id="@+id/govieww"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5sp"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearFilter"
+        android:layout_toLeftOf="@id/govieww"
+        android:layout_alignTop="@id/govieww"
+        android:text="نذری های کاربران"
+        android:layout_marginRight="10sp"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listNazri"
+        android:layout_marginTop="10sp"
+        android:layout_below="@id/govieww"/>
+</RelativeLayout>
+</layout>
